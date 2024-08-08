@@ -44,13 +44,13 @@ lean_exe checkYaml where
   supportInterpreter := true
 
 meta if get_config? doc = some "on" then -- do not download and build doc-gen4 by default
-require «doc-gen4» from git "https://github.com/leanprover/doc-gen4" @ "main"
+require «doc-gen4» from git "https://github.com/ChaosLeizure/doc-gen4" @ "6d8e3118ab526f8dfcabcbdf9f05dc34e5c423a8"
 
-require std from git "https://github.com/leanprover/std4" @ "main"
-require Qq from git "https://github.com/leanprover-community/quote4" @ "master"
-require aesop from git "https://github.com/leanprover-community/aesop" @ "master"
-require Cli from git "https://github.com/leanprover/lean4-cli" @ "nightly"
-require proofwidgets from git "https://github.com/leanprover-community/ProofWidgets4" @ "v0.0.21"
+require std from git "https://github.com/ChaosLeizure/batteries" @ "96b85b928b6a81e3f92f4e5f9f4487db9fc56dbc"
+require Qq from git "https://github.com/ChaosLeizure/quote4" @ "a387c0eb611857e2460cf97a8e861c944286e6b2"
+require aesop from git "https://github.com/ChaosLeizure/aesop" @ "238b286247425393eb540437c8e0605f0d33a227"
+require Cli from git "https://github.com/ChaosLeizure/lean4-cli" @ "39229f3630d734af7d9cfb5937ddc6b41d3aa6aa"
+require proofwidgets from git "https://github.com/ChaosLeizure/ProofWidgets4" @ "20df0b1f67ea0b2b32a027dfc3929126660ef3d4"
 
 lean_lib Cache where
   moreLeanArgs := moreLeanArgs
